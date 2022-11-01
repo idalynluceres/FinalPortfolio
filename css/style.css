@@ -417,7 +417,7 @@ h3.my-profession
     color: var(--text-black-900);
     text-transform: capitalize;
 }
-.about .about-content .skills .skill-item .progress 
+.about .about-content .skills .skill-item .skill-item-title 
 {
     background-color: var(--bg-black-50);
     height: 7px;
@@ -429,16 +429,16 @@ h3.my-profession
 {
     margin-bottom: 25px;
 }
-.about .about-content .skills .skill-item .progress .progress-in 
+.about .about-content .skills .skill-item .skill-item-title .skill-indicator 
 {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     border-radius: 4px;
-    background-color: var(--skin-color);
+    background-color: var(--bg-black-700);
 }
-.about .about-content .skills .skill-item .skill-percent
+.about .about-content .skills .skill-item .skill-icon
 {
     position: absolute;
     right: 0;
@@ -446,6 +446,11 @@ h3.my-profession
     top: -40px;
     font-weight: 400;
     line-height: 40px;
+}
+.about .about-content .skills .skill-item .skill-icon i
+{
+    font-size: 40px;
+    color: var(--skin-color);
 }
 .about .about-content .education,
 .about .about-content .experience
@@ -616,6 +621,12 @@ h3.my-profession
     flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+.portfolio .portfolio-item:hover
+{
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(0.9);
 }
 .portfolio .portfolio-item-inner
 {
@@ -719,6 +730,23 @@ h3.my-profession
     height: 50px;
     padding: 0 50px;
 }
+/* Scroll Up Button */
+#myBtn 
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    font-size: 30px; /* Increase font size */
+}
+#myBtn i 
+{
+    color: var(--skin-color);
+}
+
 @media screen and (max-width:1199px)
 {
     .aside
@@ -771,3 +799,4 @@ h3.my-profession
         max-width: 100%;
     }
 }
+
